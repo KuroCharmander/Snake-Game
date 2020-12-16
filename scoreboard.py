@@ -20,6 +20,7 @@ class Scoreboard(Turtle):
         self.update_scoreboard()
 
     def countdown(self):
+        """3 second countdown before the game starts."""
         self.home()
         for sec in range(3, 0, -1):
             self.write(f"{sec}", align=ALIGNMENT, font=FONT)
