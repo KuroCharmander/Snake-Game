@@ -13,7 +13,7 @@ screen.tracer(0)
 
 snake = Snake()
 food = Food()
-scoreboard = Scoreboard()
+scoreboard = Scoreboard(screen.textinput(title="Snake Name", prompt="What is your name?"))
 
 # Set the listeners
 screen.listen()
