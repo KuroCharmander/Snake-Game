@@ -1,4 +1,5 @@
 from turtle import Turtle
+import time
 
 ALIGNMENT = "center"
 FONT = ("Courier", 24, "normal")
@@ -15,7 +16,15 @@ class Scoreboard(Turtle):
         self.color("white")
         self.hideturtle()
         self.penup()
+        self.countdown()
         self.update_scoreboard()
+
+    def countdown(self):
+        self.home()
+        for sec in range(3, 0, -1):
+            self.write(f"{sec}", align=ALIGNMENT, font=FONT)
+            time.sleep(1)
+            self.clear()
 
     def increase_score(self):
         """Increase the score."""
